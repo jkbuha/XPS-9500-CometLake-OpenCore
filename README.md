@@ -5,7 +5,7 @@
 | OpenCore Version | 0.9.5 |
 | --- | --- |
 | macOS Version | 12.6.8 (Monterey) |
-| SMSBios | MacBookPro16,4 |
+| SMBios | MacBookPro16,4 |
 
 # Hardware Specifications
 
@@ -51,9 +51,11 @@ CFG_LOCK using modGRUBshell as follows:
 setup_var_cv CpuSetup 0x43 0x00
 ```
 
-# S3 ACPI
-Despite Dell's attempts to remove S3 from the sleep options, it's possible, in theory at least, to get S3 working using a combination of IFR edits 
-and ACPI table changes. The first step is to re-enable S3 from the UEFI interface using modGRUBshell:
+# S4 ACPI
+Despite Dell's attempts to sabotage S3 sleep, I've managed to get S4 sleep 
+(hibernatemode 25) on macOS, uusing a combination of IFR edits 
+and ACPI table changes. The first step is to change the following 
+variables from the UEFI interface using modGRUBshell:
 
 ```bash
 setup_var PchSetup 0x16 00 (RTC Memory Lock ->Disabled)
