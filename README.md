@@ -43,14 +43,6 @@ This is the first working configuration for the Dell XPS 9500 with working S4 hi
 | VT for Direct I/O | Disabled |
 | Fingerprint Reader | Disabled |
 
-# UEFI IFR edits
-Ahead of installing, as with other hackintoshes you will need to disable 
-CFG_LOCK using modGRUBshell as follows:
-
-```bash
-setup_var_cv CpuSetup 0x43 0x00
-```
-
 # S4 ACPI
 Despite Dell's attempts to sabotage S3 sleep, I've managed to get S4 sleep 
 (hibernatemode 25) on macOS, uusing a combination of IFR edits 
