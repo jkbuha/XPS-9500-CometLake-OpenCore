@@ -64,6 +64,14 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>SSDT-HPET_Disable.aml</string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
                     <string>SSDT-I2C.aml</string>
                     <key>Enabled</key>
                     <true/>
@@ -85,6 +93,30 @@
                     <true/>
                     <key>Path</key>
                     <string>SSDT-OCWork-dell.aml</string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string>SSDT-PLUG.aml</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>SSDT-PLUG.aml</string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string>SSDT-PNLF-CFL.aml</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>SSDT-PNLF-CFL.aml</string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string>SSDT-PPMC.aml</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>SSDT-PPMC.aml</string>
                 </dict>
                 <dict>
                     <key>Comment</key>
@@ -92,31 +124,7 @@
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
-                    <string>SSDT-EC.aml</string>
-                </dict>
-                <dict>
-                    <key>Comment</key>
-                    <string>SSDT-PLUG.aml</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Path</key>
-                    <string>SSDT-PLUG.aml</string>
-                </dict>
-                <dict>
-                    <key>Comment</key>
-                    <string>SSDT-PNLF-CFL.aml</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Path</key>
-                    <string>SSDT-PNLF-CFL.aml</string>
-                </dict>
-                <dict>
-                    <key>Comment</key>
-                    <string>SSDT-PPMC.aml</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Path</key>
-                    <string>SSDT-PPMC.aml</string>
+                    <string>SSDT-PTSWAKTTS.aml</string>
                 </dict>
                 <dict>
                     <key>Comment</key>
@@ -146,15 +154,7 @@
                     <key>Comment</key>
                     <string></string>
                     <key>Enabled</key>
-                    <true/>
-                    <key>Path</key>
-                    <string>SSDT-RMDT.aml</string>
-                </dict>
-                <dict>
-                    <key>Comment</key>
-                    <string></string>
-                    <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-DBG.aml</string>
                 </dict>
@@ -229,6 +229,66 @@
                     <data></data>
                     <key>Replace</key>
                     <data>WFBSVwI=</data>
+                    <key>ReplaceMask</key>
+                    <data></data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                    <key>TableLength</key>
+                    <integer>0</integer>
+                    <key>TableSignature</key>
+                    <data></data>
+                </dict>
+                <dict>
+                    <key>Base</key>
+                    <string></string>
+                    <key>BaseSkip</key>
+                    <integer>0</integer>
+                    <key>Comment</key>
+                    <string>_PTS to ZPTS(1,N)</string>
+                    <key>Count</key>
+                    <integer>0</integer>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Find</key>
+                    <data>X1BUUwE=</data>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data></data>
+                    <key>OemTableId</key>
+                    <data></data>
+                    <key>Replace</key>
+                    <data>WlBUUwE=</data>
+                    <key>ReplaceMask</key>
+                    <data></data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                    <key>TableLength</key>
+                    <integer>0</integer>
+                    <key>TableSignature</key>
+                    <data></data>
+                </dict>
+                <dict>
+                    <key>Base</key>
+                    <string></string>
+                    <key>BaseSkip</key>
+                    <integer>0</integer>
+                    <key>Comment</key>
+                    <string>_WAK to ZWAK(1,S)</string>
+                    <key>Count</key>
+                    <integer>0</integer>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Find</key>
+                    <data>X1dBSwk=</data>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data></data>
+                    <key>OemTableId</key>
+                    <data></data>
+                    <key>Replace</key>
+                    <data>WldBSwk=</data>
                     <key>ReplaceMask</key>
                     <data></data>
                     <key>Skip</key>
@@ -377,6 +437,8 @@
                     <string>Internal@0,31,3</string>
                     <key>device_type</key>
                     <string>Audio device</string>
+                    <key>hda-gfx</key>
+                    <string>onboard-1</string>
                     <key>layout-id</key>
                     <integer>99</integer>
                     <key>model</key>
@@ -389,9 +451,9 @@
                     <key>#dpcd-max-link-rate</key>
                     <data>CgAAAA==</data>
                     <key>AAPL,ig-platform-id</key>
-                    <data>CQClPg==</data>
+                    <data>AACSPg==</data>
                     <key>device-id</key>
-                    <data>mz4AAA==</data>
+                    <data>kj4AAA==</data>
                     <key>dpcd-max-link-rate</key>
                     <data>CgAAAA==</data>
                     <key>enable-backlight-registers-fix</key>
@@ -619,7 +681,7 @@
                     <key>Comment</key>
                     <string>V1.0.8</string>
                     <key>Enabled</key>
-                    <false/>
+                    <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/DebugEnhancer</string>
                     <key>MaxKernel</key>
@@ -979,7 +1041,7 @@
                     <key>Comment</key>
                     <string>V0.1.4</string>
                     <key>Enabled</key>
-                    <false/>
+                    <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/ACPIDebug</string>
                     <key>MaxKernel</key>
@@ -1713,7 +1775,7 @@
                     <key>SystemAudioVolume</key>
                     <data>Rg==</data>
                     <key>boot-args</key>
-                    <string>-v keepsyms=1 kext-dev-mode=1 igfxonln=1 igfxfw=2 -igfxblr hbfx-ahbm=3 igfxnorpsc=1</string>
+                    <string>-v keepsyms=1 kext-dev-mode=1 igfxonln=1 igfxfw=2 -igfxblr hbfx-ahbm=3</string>
                     <key>csr-active-config</key>
                     <data>/wcAAA==</data>
                     <key>prev-lang:kbd</key>

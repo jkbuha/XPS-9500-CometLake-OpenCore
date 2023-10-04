@@ -64,7 +64,5 @@ setup_var CpuSetup 0x3E 00 (CFG Lock ->Disabled)
 
 # Known Issues
 
-- Slight power consumption increase on resume from hibernate
-
-This is likely due to the dGPU powering up again on resume from S4 sleep. I need to figure out how to ACPI debug and patch the offending method in DSDT, unless someone more experienced shows me first...
+- None as far as I know...
 
