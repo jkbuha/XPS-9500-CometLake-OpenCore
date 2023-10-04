@@ -54,6 +54,17 @@ setup_var PchSetup 0x16 00 (RTC Memory Lock ->Disabled)
 setup_var CpuSetup 0x3E 00 (CFG Lock ->Disabled)
 ```
 
+In macOS (Monterey, Ventura, Sonoma) open a terminal and set the following:
+
+```bash
+sudo pmset -a hibernation 25
+sudo pmset -a standby 1
+sudo pmset -a powernap 1
+sudo pmset -a sleep 1
+sudo pmset -a standbydelaylow 1
+sudo pmset -a standbydelayhigh 1
+```
+
 # Known Issues
 
 - None as far as I know...
