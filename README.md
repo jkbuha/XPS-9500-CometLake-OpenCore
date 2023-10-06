@@ -1,6 +1,6 @@
 # Dell XPS 9500 macOS Monterey with OpenCore
 
-![hackintosh]/screenshot.png
+![hackintosh](./screenshot.png)
 
 # Details
 
