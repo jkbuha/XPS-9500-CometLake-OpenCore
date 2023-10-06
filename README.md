@@ -1,10 +1,12 @@
 # Dell XPS 9500 macOS Monterey with OpenCore
 
+![hackintosh]/screenshot.png
+
 # Details
 
 | OpenCore Version | 0.9.5 |
 | --- | --- |
-| macOS Version | 12.6.8 (Monterey) |
+| macOS Version | 12.7 (Monterey) |
 | SMBios | MacBookPro16,4 |
 
 # Hardware Specifications
@@ -43,14 +45,6 @@ This is the first working configuration for the Dell XPS 9500 with working S4 hi
 | VT for Direct I/O | Disabled |
 | Fingerprint Reader | Disabled |
 
-# UEFI IFR edits
-Ahead of installing, as with other hackintoshes you will need to disable 
-CFG_LOCK using modGRUBshell as follows:
-
-```bash
-setup_var_cv CpuSetup 0x43 0x00
-```
-
 # S4 ACPI
 Despite Dell's attempts to sabotage S3 sleep, I've managed to get S4 sleep 
 (hibernatemode 25) on macOS, uusing a combination of IFR edits 
@@ -60,6 +54,17 @@ variables from the UEFI interface using modGRUBshell:
 ```bash
 setup_var PchSetup 0x16 00 (RTC Memory Lock ->Disabled)
 setup_var CpuSetup 0x3E 00 (CFG Lock ->Disabled)
+```
+
+In macOS (Monterey, Ventura, Sonoma) open a terminal and set the following:
+
+```bash
+sudo pmset -a hibernation 25
+sudo pmset -a standby 1
+sudo pmset -a powernap 1
+sudo pmset -a sleep 1
+sudo pmset -a standbydelaylow 1
+sudo pmset -a standbydelayhigh 1
 ```
 
 # Known Issues
