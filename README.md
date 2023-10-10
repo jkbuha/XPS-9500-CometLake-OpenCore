@@ -13,7 +13,7 @@
 
 | Hardware | Specification | Status |
 | --- | --- | --- |
-| CPU | Intel Core i7-10750K | ✅ Working |
+| CPU | Intel Core i7-10750H | ✅ Working |
 | RAM | DDR4 16GB | ✅ Working |
 | Audio | Realtek ALC3281 | ✅ Working |
 | WiFi | Killer 1675 (AX201) | ✅ Working |
@@ -54,12 +54,13 @@ variables from the UEFI interface using modGRUBshell:
 ```bash
 setup_var PchSetup 0x16 00 (RTC Memory Lock ->Disabled)
 setup_var CpuSetup 0x3E 00 (CFG Lock ->Disabled)
+setup_var CpuSetup 0xDA 00 (Overclocking Lock ->Disabled)
 ```
 
 In macOS (Monterey, Ventura, Sonoma) open a terminal and set the following:
 
 ```bash
-sudo pmset -a hibernation 25
+sudo pmset -a hibernatemode 25
 sudo pmset -a standby 1
 sudo pmset -a powernap 1
 sudo pmset -a sleep 1
