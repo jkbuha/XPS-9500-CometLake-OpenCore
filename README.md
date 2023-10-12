@@ -1,4 +1,4 @@
-# Dell XPS 9500 macOS Monterey with OpenCore
+# Dell XPS 9500 macOS Ventura with OpenCore
 
 ![hackintosh](./screenshot.png)
 
@@ -6,7 +6,7 @@
 
 | OpenCore Version | 0.9.5 |
 | --- | --- |
-| macOS Version | 12.7 (Monterey) |
+| macOS Version | 13.6 (Ventura) |
 | SMBios | MacBookPro16,4 |
 
 # Hardware Specifications
