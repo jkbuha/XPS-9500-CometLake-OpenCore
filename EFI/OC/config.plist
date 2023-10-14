@@ -26,7 +26,7 @@
                     <key>Comment</key>
                     <string>6650XT with Razer Chroma X</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-RAZERX.aml</string>
                 </dict>
@@ -517,7 +517,7 @@
                     <key>framebuffer-patch-enable</key>
                     <data>AQAAAA==</data>
                 </dict>
-                <key>##PciRoot(0x0)/Pci(0x2,0x0)-1</key>
+                <key>##PciRoot(0x0)/Pci(0x2,0x0)_test</key>
                 <dict>
                     <key>#AAPL,ig-platform-id</key>
                     <data>/wUAAA==</data>
@@ -768,15 +768,13 @@
                 </dict>
                 <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
                 <dict>
-                    <key>#AAPL00,override-no-connect</key>
-                    <data>AP///////wBNENAUAAAAAAMeAQS1IhV4Cm08qlIzuSUMT1YAAAABAQEBAQEBAQEBAQEBAQEBpqYAoPBgRZAwIDYAUNIQAAAYKLkAoPBgRZAwIDYAUNIQAAAYAAAA/gA5MFQwMoBMUTE1NlIxAAAAAAACQQMyARIAAAsBCiAgARsCAw8A4wWAAOYGBQFgYCgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtw==</data>
-                    <key>#enable-dpcd-max-link-rate-fix</key>
-                    <data>AQAAAA==</data>
                     <key>AAPL,ig-platform-id</key>
-                    <data>CQClPg==</data>
+                    <data>AACSPg==</data>
                     <key>device-id</key>
-                    <data>mz4AAA==</data>
-                    <key>enable-hdmi-dividers-fix</key>
+                    <data>kj4AAA==</data>
+                    <key>enable-backlight-registers-fix</key>
+                    <data>AQAAAA==</data>
+                    <key>enable-dpcd-max-link-rate-fix</key>
                     <data>AQAAAA==</data>
                     <key>enable-hdmi20</key>
                     <data>AQAAAA==</data>
@@ -786,12 +784,28 @@
                     <data>AQAAAA==</data>
                     <key>framebuffer-con1-alldata</key>
                     <data>AQUJAAAEAACHAQAA</data>
+                    <key>framebuffer-con1-busid</key>
+                    <data>AQAAAA==</data>
                     <key>framebuffer-con1-enable</key>
                     <data>AQAAAA==</data>
+                    <key>framebuffer-con1-has-lspcon</key>
+                    <data>AQAAAA==</data>
+                    <key>framebuffer-con1-preferred-lspcon-mode</key>
+                    <data>AQAAAA==</data>
+                    <key>framebuffer-con1-type</key>
+                    <data>AgAAAA==</data>
                     <key>framebuffer-con2-alldata</key>
                     <data>AgYJAAAEAACHAQAA</data>
+                    <key>framebuffer-con2-busid</key>
+                    <data>AQAAAA==</data>
                     <key>framebuffer-con2-enable</key>
                     <data>AQAAAA==</data>
+                    <key>framebuffer-con2-has-lspcon</key>
+                    <data>AQAAAA==</data>
+                    <key>framebuffer-con2-preferred-lspcon-mode</key>
+                    <data>AQAAAA==</data>
+                    <key>framebuffer-con2-type</key>
+                    <data>AAgAAA==</data>
                     <key>framebuffer-con3-alldata</key>
                     <data>AwQKAAAIAACHAQAA</data>
                     <key>framebuffer-con3-enable</key>
@@ -997,24 +1011,6 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>ECEnabler.kext</string>
-                    <key>Comment</key>
-                    <string>V1.0.4</string>
-                    <key>Enabled</key>
-                    <false/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/ECEnabler</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
                     <string>CPUFriend.kext</string>
                     <key>Comment</key>
                     <string>V1.2.7</string>
@@ -1076,24 +1072,6 @@
                     <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/IntelBTPatcher</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>IntelBluetoothInjector.kext</string>
-                    <key>Comment</key>
-                    <string>V2.3.0</string>
-                    <key>Enabled</key>
-                    <false/>
-                    <key>ExecutablePath</key>
-                    <string></string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -1433,7 +1411,7 @@
                     <key>Comment</key>
                     <string>V1.6.1</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/DirectHW</string>
                     <key>MaxKernel</key>
@@ -2167,7 +2145,7 @@
                     <key>SystemAudioVolume</key>
                     <data>Rg==</data>
                     <key>boot-args</key>
-                    <string>-v keepsyms=1 kext-dev-mode=1 igfxonln=1 igfxfw=2 -igfxblr hbfx-ahbm=3 acpi_layer=0x8 acpi_level=0x2 debug=0x100</string>
+                    <string>-v keepsyms=1 kext-dev-mode=1 igfxonln=1 igfxfw=2 -igfxblr hbfx-ahbm=3</string>
                     <key>csr-active-config</key>
                     <data>/wcAAA==</data>
                     <key>prev-lang:kbd</key>
