@@ -28,3 +28,7 @@ Temporary Items
 # stuff for local generation
 *.tsv
 *.csv
+*.bak
+*.env
+EFI/OC/config.plist.done
+
