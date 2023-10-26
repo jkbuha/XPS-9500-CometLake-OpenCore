@@ -61,12 +61,16 @@ else
 fi
 echo "Setting up OpenCore GUI config without debug - relies on Resources folder being setup properly"
 CANOPY_BOOL=true perl -0pi -e 's/(OpenCanopy\.efi<\/string>\s*<key>Enabled<\/key>\s*<).*(\/>)/$1$ENV{'CANOPY_BOOL'}$2/g' EFI/OC/config.plist
-BOOT_ARGS="kext-dev-mode=1 igfxonln=1 igfxfw=2 -$igfxblRorT hbfx-ahbm=3" perl -0pi -e 's/(boot-args<\/key>\s*<string>)(.*)(<\/string>)/$1$ENV{'BOOT_ARGS'}$3/g' EFI/OC/config.plist
+BOOT_ARGS="agdpmod=vit9696 kext-dev-mode=1 igfxonln=1 igfxfw=2 -$igfxblRorT hbfx-ahbm=3" perl -0pi -e 's/(boot-args<\/key>\s*<string>)(.*)(<\/string>)/$1$ENV{'BOOT_ARGS'}$3/g' EFI/OC/config.plist
+
+echo Enable SIP to prevent update issues
+SIP_VALUE="AAAAAA==" perl -0pi -e 's/(csr-active-config<\/key>)(\s*)(<data>).*(<\/data>)/$1$2$3$ENV{'SIP_VALUE'}$4/g' EFI/OC/config.plist
 
 # handle debug : https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/debug.html#config-changes
 
-echo DONE! Making a backup
+echo DONE! Making a backup to EFI/OC/config.plist.done - rename it to not have it overwritten!
 cp EFI/OC/config.plist EFI/OC/config.plist.done
-echo to restore original config.plist run : git checkout EFI/OC/config.plist !!!
-echo Now you can mount your EFI folder and put the playlist file there. Enjoy!
+echo Restoring original EFI/OC/config.plist
+git checkout EFI/OC/config.plist
+echo Now you can mount your EFI folder and put the new plist file there. Enjoy!
 
