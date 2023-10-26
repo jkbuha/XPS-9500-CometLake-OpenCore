@@ -2145,8 +2145,7 @@
                     <key>SystemAudioVolume</key>
                     <data>Rg==</data>
                     <key>boot-args</key>
-                    <string>-v agdpmod=vit9696 keepsyms=1 kext-dev-mode=1 
-igfxonln=1 igfxfw=2 -igfxblr hbfx-ahbm=3</string>
+                    <string>-v agdpmod=vit9696 keepsyms=1 kext-dev-mode=1 igfxonln=1 igfxfw=2 -igfxblr hbfx-ahbm=3</string>
                     <key>csr-active-config</key>
                     <data>/wcAAA==</data>
                     <key>prev-lang:kbd</key>
