@@ -68,6 +68,14 @@ sudo pmset -a standbydelaylow 1
 sudo pmset -a standbydelayhigh 1
 ```
 
+# finalise_config.sh
+This bash script can be run to setup the Platform info like serial, model etc in an automated matter.
+It will update the config.plist in EFI/OC/ and makes a copy ( will be overwritten next run).
+
+The config.plist has a construct with min and maxkernel to support Sonoma and the script detects the OS version to modify certain parameters and sets OpenCore to boot graphically.
+
+The script relies on the current config.plist and may not work as expected on other versions of the file or on other OS versions.
+
 # Known Issues
 
 - None as far as I know...

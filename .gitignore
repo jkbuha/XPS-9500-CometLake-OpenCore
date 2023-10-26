@@ -30,5 +30,6 @@ Temporary Items
 *.csv
 *.bak
 *.env
-EFI/OC/config.plist.done
-
+EFI/OC/config.plist.done*
+EFI/OC/Kexts/.DS_Store
+#EFI/OC/config.plist
