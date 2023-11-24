@@ -4,25 +4,25 @@
 
 # Details
 
-| OpenCore Version | 0.9.5 |
+| OpenCore Version | 0.9.6 |
 | --- | --- |
-| macOS Version | 13.6 (Ventura) |
+| macOS Version | 13.6.1 (Ventura) |
 | SMBios | MacBookPro16,4 |
 
 # Hardware Specifications
 
 | Hardware | Specification | Status |
 | --- | --- | --- |
-| CPU | Intel Core i7-10750H | ✅ Working |
-| RAM | DDR4 16GB | ✅ Working |
+| CPU | Intel Core i9-10885H | ✅ Working |
+| RAM | DDR4 32GB | ✅ Working |
 | Audio | Realtek ALC3281 | ✅ Working |
 | WiFi | Killer 1675 (AX201) | ✅ Working |
-| Bluetooth | AX211 Wi-Fi 5 | ✅ Working |
+| Bluetooth | AX201 Wi-Fi 5 | ✅ Working |
 | SSD | Crucial P3 2TB | ✅ Working |
 | Keyboard | - | ✅ Working |
 | Trackpad | I2C Connection | ✅ Working |
 | Webcam | Microdia RGB IR HD camera | ✅ Working |
-| MicroSD Card | RTS5260 Card Reader | 🔶 Partially working |
+| MicroSD Card | RTS5260 Card Reader | ✅ Working |
 | Fingerprint Sensor | Shenzen Goodix | 🔶 Partially working |
 | S4 | Hibernate/Wake | ✅ Working |
 | GPU | Intel HD630 Graphics | ✅ Working |
