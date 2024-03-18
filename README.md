@@ -4,9 +4,9 @@
 
 # Details
 
-| OpenCore Version | 0.9.6 |
+| OpenCore Version | 0.9.9 |
 | --- | --- |
-| macOS Version | 13.6.1 (Ventura) |
+| macOS Version | 13.6.5 (Ventura) |
 | SMBios | MacBookPro16,4 |
 
 # Hardware Specifications
