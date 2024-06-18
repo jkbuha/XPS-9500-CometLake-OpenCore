@@ -1,4 +1,4 @@
-# Dell XPS 9500 macOS Ventura with OpenCore
+# Dell XPS 9500 macOS with OpenCore
 
 ![hackintosh](./screenshot.png)
 
@@ -26,7 +26,7 @@
 | Fingerprint Sensor | Shenzen Goodix | 🔶 Partially working |
 | S4 | Hibernate/Wake | ✅ Working |
 | GPU | Intel HD630 Graphics | ✅ Working |
-| eGPU | AMD Sapphire Radeon RX580 | ✅ Working |
+| eGPU | AMD Sapphire Radeon RX6950XT | ✅ Working |
 | Display | 1920 x 1200 FHD LCD | ✅ Working |
 
 # Overview
@@ -55,6 +55,8 @@ variables from the UEFI interface using modGRUBshell:
 setup_var PchSetup 0x16 00 (RTC Memory Lock ->Disabled)
 setup_var CpuSetup 0x3E 00 (CFG Lock ->Disabled)
 setup_var CpuSetup 0xDA 00 (Overclocking Lock ->Disabled)
+setup_var SaSetup 0xF5 02 (DVMT Pre-allocated ->64MB)
+setup_var SaSetup 0xF6 03 (Total DVMT ->MAX)
 ```
 
 In macOS (Monterey, Ventura, Sonoma) open a terminal and set the following:
