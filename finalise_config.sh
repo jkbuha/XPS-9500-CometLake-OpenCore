@@ -16,7 +16,7 @@ fi
 if [ ! -f xps9500p5550.env ]
 then
     chmod u+x generate-unique-machine-values.sh 
-    ./generate-unique-machine-values.sh -m 'MacBookPro16,4' -n 1 --csv xps9500p5550.csv --tsv xps9500p5550.tsv --output-env xps9500p5550.env
+    ./generate-unique-machine-values.sh -m 'MacBookAir9,1' -n 1 --csv xps9500p5550.csv --tsv xps9500p5550.tsv --output-env xps9500p5550.env
 else
     echo Env file exists, remove xps9500p5550.env to use new values
 fi

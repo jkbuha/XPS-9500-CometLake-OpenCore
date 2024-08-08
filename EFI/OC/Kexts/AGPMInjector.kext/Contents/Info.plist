@@ -36,7 +36,7 @@
 			<string>IOPlatformPluginDevice</string>
 			<key>Machines</key>
 			<dict>
-				<key>MacBookPro16,4</key>
+				<key>MacBookAir9,1</key>
 				<dict>
 					<key>Vendor8086Device3E92</key>
 					<dict>
