@@ -24,7 +24,7 @@
 | Webcam | Microdia RGB IR HD camera | ✅ Working |
 | MicroSD Card | RTS5260 Card Reader | ✅ Working |
 | Fingerprint Sensor | Shenzen Goodix | 🔶 Partially working |
-| S4 | Hibernate/Wake | ✅ Working |
+| S4 SLeep | Hibernate/Wake | ✅ Working |
 | GPU | Intel HD630 Graphics | ✅ Working |
 | eGPU | AMD Sapphire Radeon RX6950XT | ✅ Working |
 | Display | 1920 x 1200 FHD LCD | ✅ Working |
@@ -68,6 +68,8 @@ sudo pmset -a powernap 1
 sudo pmset -a sleep 1
 sudo pmset -a standbydelaylow 1
 sudo pmset -a standbydelayhigh 1
+sudo pmset -a womp 0
+sudo pmset -a proximitywake 0
 ```
 
 # finalise_config.sh
