@@ -112,5 +112,5 @@ setup_var CpuSetup 0x1B7  0x01      # Enable OverClocking Feature
 setup_var CpuSetup 0x2AC  0x01 	    # Enable Intel Speed Optimizer (ISO)
 setup_var CpuSetup 0x46   0x08      # Package C State Limit: C10
 setup_var CpuSetup 0x3B   0x00      # Disable Package C-State Demotion 
-setup_var CpuSetup 0x3C   0x01      # Disable Package C-State Un-Demotion
+setup_var CpuSetup 0x3C   0x01      # Enable Package C-State Un-Demotion
 ```
