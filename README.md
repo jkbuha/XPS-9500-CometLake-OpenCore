@@ -82,5 +82,35 @@ The script relies on the current config.plist and may not work as expected on ot
 
 # Known Issues
 
-- None as far as I know...
+- None as far as I know.
 
+# Experimental settings for faster performance and better power saving
+
+The following UEFI IFR settings have worked very well on my i9 and given me even better performance AND power savings. However YMMV and you may soft-brick your machine (and might need to RTC 
+reset your laptop), Use with caution!
+
+```bash
+setup_var Setup 0x14  0x00          # ACPI Debug: Disabled
+setup_var Setup 0x38  0x01          # Enable Sensor Standby: Enabled
+setup_var Setup 0x44  0x01          # Enable MSI
+setup_var Setup 0x428 0x02          # USB Port 1 RTD3 Support: Super Speed
+setup_var Setup 0x429 0x02          # USB Port 2 RTD3 Support: Super Speed
+setup_var SaSetup 0x130  0x00       # ECC DRAM Support: Disabled
+setup_var SaSetup 0x123   0x03      # DMI ASPM: L0sL1
+
+setup_var Setup 0x4cd     0x01      # Tbt Dynamic AC/DC L1: Enable
+setup_var Setup 0x4B5     0x03      # Enable ASPM: L0sL1
+setup_var Setup 0x4CB     0x03      # TBT Enable ASPM: L1.1 & L1.2
+
+setup_var PchSetup 0x586    0x00      # WoV DSP Firmware (Intel) - Disabled
+
+setup_var PchSetup 0x04   0x03       # Deep Sx Power policy: S4-S5/Battery
+setup_var PchSetup 0x10   0x01       # Allow CLKRUN# logic to stop the PCI clocks: Enabled
+
+setup_var CpuSetup 0x24D 0x01       # Dual Tau Boost: Enabled
+setup_var CpuSetup 0x1B7 0x01       # OverClocking Feature: Enabled
+setup_var CpuSetup 0x2ac 0x01  	    # Intel Speed Optimizer (ISO) Enabled
+setup_var CpuSetup 0x46  0x08       # Package C State Limit: C10
+setup_var CpuSetup 0x3B  0x00       # Configure Package C-State Demotion: Disable 
+setup_var CpuSetup 0x3C  0x01       # Configure Package C-State Un-Demotion: Enable
+```
