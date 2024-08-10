@@ -90,27 +90,27 @@ The following UEFI IFR settings have worked very well on my i9 and given me even
 reset your laptop), Use with caution!
 
 ```bash
-setup_var Setup 0x14  0x00          # ACPI Debug: Disabled
-setup_var Setup 0x38  0x01          # Enable Sensor Standby: Enabled
-setup_var Setup 0x44  0x01          # Enable MSI
-setup_var Setup 0x428 0x02          # USB Port 1 RTD3 Support: Super Speed
-setup_var Setup 0x429 0x02          # USB Port 2 RTD3 Support: Super Speed
-setup_var SaSetup 0x130  0x00       # ECC DRAM Support: Disabled
+setup_var Setup 0x14  	  0x00      # Disable ACPI Debug
+setup_var Setup 0x38  	  0x01      # Enable Sensor Standby
+setup_var Setup 0x44  	  0x01      # Enable MSI
+setup_var Setup 0x428 	  0x02      # USB Port 1 RTD3 Support: Super Speed
+setup_var Setup 0x429 	  0x02      # USB Port 2 RTD3 Support: Super Speed
+setup_var SaSetup 0x130   0x00      # ECC DRAM Support: Disabled (only if your Precision doesnt have ECC DRAM)
 setup_var SaSetup 0x123   0x03      # DMI ASPM: L0sL1
 
-setup_var Setup 0x4cd     0x01      # Tbt Dynamic AC/DC L1: Enable
+setup_var Setup 0x4CD     0x01      # Enable Tbt Dynamic AC/DC L1
 setup_var Setup 0x4B5     0x03      # Enable ASPM: L0sL1
 setup_var Setup 0x4CB     0x03      # TBT Enable ASPM: L1.1 & L1.2
 
-setup_var PchSetup 0x586    0x00      # WoV DSP Firmware (Intel) - Disabled
+setup_var PchSetup 0x586  0x00      # Disable Intel WoV DSP Firmware
 
-setup_var PchSetup 0x04   0x03       # Deep Sx Power policy: S4-S5/Battery
-setup_var PchSetup 0x10   0x01       # Allow CLKRUN# logic to stop the PCI clocks: Enabled
+setup_var PchSetup 0x04   0x03      # Deep Sx Power policy: S4-S5/Battery
+setup_var PchSetup 0x10   0x01      # Allow CLKRUN# logic to stop the PCI clocks
 
-setup_var CpuSetup 0x24D 0x01       # Dual Tau Boost: Enabled
-setup_var CpuSetup 0x1B7 0x01       # OverClocking Feature: Enabled
-setup_var CpuSetup 0x2ac 0x01  	    # Intel Speed Optimizer (ISO) Enabled
-setup_var CpuSetup 0x46  0x08       # Package C State Limit: C10
-setup_var CpuSetup 0x3B  0x00       # Configure Package C-State Demotion: Disable 
-setup_var CpuSetup 0x3C  0x01       # Configure Package C-State Un-Demotion: Enable
+setup_var CpuSetup 0x24D  0x01      # Enable Dual Tau Boost
+setup_var CpuSetup 0x1B7  0x01      # Enable OverClocking Feature
+setup_var CpuSetup 0x2AC  0x01 	    # Enable Intel Speed Optimizer (ISO)
+setup_var CpuSetup 0x46   0x08      # Package C State Limit: C10
+setup_var CpuSetup 0x3B   0x00      # Disable Package C-State Demotion 
+setup_var CpuSetup 0x3C   0x01      # Disable Package C-State Un-Demotion
 ```
