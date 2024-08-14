@@ -7,7 +7,7 @@
 | OpenCore Version | 1.0.1 |
 | --- | --- |
 | macOS Version | 13.6.9 (Ventura) |
-| SMBios | MacBookPro16,4 |
+| SMBios | MacBookAir9,1 |
 
 # Hardware Specifications
 
@@ -23,7 +23,7 @@
 | Trackpad | I2C Connection | ✅ Working |
 | Webcam | Microdia RGB IR HD camera | ✅ Working |
 | MicroSD Card | RTS5260 Card Reader | ✅ Working |
-| Fingerprint Sensor | Shenzen Goodix | 🔶 Partially working |
+| Fingerprint Sensor | Shenzen Goodix | ❌ Not Working |
 | S4 SLeep | Hibernate/Wake | ✅ Working |
 | GPU | Intel HD630 Graphics | ✅ Working |
 | eGPU | AMD Sapphire Radeon RX6950XT | ✅ Working |
@@ -45,18 +45,18 @@ This is the first working configuration for the Dell XPS 9500 with working S4 hi
 | VT for Direct I/O | Disabled |
 | Fingerprint Reader | Disabled |
 
-# S4 ACPI
+# S4 Sleep
 Despite Dell's attempts to sabotage S3 sleep, I've managed to get S4 sleep 
 (hibernatemode 25) on macOS, uusing a combination of IFR edits 
 and ACPI table changes. The first step is to change the following 
 variables from the UEFI interface using modGRUBshell:
 
 ```bash
-setup_var PchSetup 0x16 00 (RTC Memory Lock ->Disabled)
-setup_var CpuSetup 0x3E 00 (CFG Lock ->Disabled)
-setup_var CpuSetup 0xDA 00 (Overclocking Lock ->Disabled)
-setup_var SaSetup 0xF5 02 (DVMT Pre-allocated ->64MB)
-setup_var SaSetup 0xF6 03 (Total DVMT ->MAX)
+setup_var PchSetup 0x16 0x00 # Disable RTC Memory Lock
+setup_var CpuSetup 0x3E 0x00 # Disable CFG Lock
+setup_var CpuSetup 0xDA 0x00 # Disable Overclocking Lock
+setup_var SaSetup  0xF5 0x02 # DVMT Pre-allocated = 64MB
+setup_var SaSetup  0xF6 0x03 # Total DVMT = MAX
 ```
 
 In macOS (Monterey, Ventura, Sonoma) open a terminal and set the following:
@@ -82,12 +82,12 @@ The script relies on the current config.plist and may not work as expected on ot
 
 # Known Issues
 
-- None as far as I know.
+None as far as I know.
 
 # Experimental settings for faster performance and better power saving
 
 The following UEFI IFR settings have worked very well on my i9 and given me even better performance AND power savings. However YMMV and you may soft-brick your machine (and might need to RTC 
-reset your laptop), Use with caution!
+reset your laptop). Use with caution!
 
 ```bash
 setup_var Setup 0x14  	  0x00      # Disable ACPI Debug
@@ -95,7 +95,7 @@ setup_var Setup 0x38  	  0x01      # Enable Sensor Standby
 setup_var Setup 0x44  	  0x01      # Enable MSI
 setup_var Setup 0x428 	  0x02      # USB Port 1 RTD3 Support: Super Speed
 setup_var Setup 0x429 	  0x02      # USB Port 2 RTD3 Support: Super Speed
-setup_var SaSetup 0x130   0x00      # ECC DRAM Support: Disabled (only if your Precision doesnt have ECC DRAM)
+setup_var SaSetup 0x130   0x00      # Disable ECC DRAM Support (if Precision doesnt have ECC DRAM)
 setup_var SaSetup 0x123   0x03      # DMI ASPM: L0sL1
 
 setup_var Setup 0x4CD     0x01      # Enable Tbt Dynamic AC/DC L1
