@@ -115,9 +115,10 @@ setup_var CpuSetup 0x3B   0x00      # Disable Package C-State Demotion
 setup_var CpuSetup 0x3C   0x01      # Enable Package C-State Un-Demotion
 ```
 
-# Dontate
+# Donate
 
 If you like and use this project, feel free to contribute anything you can below:
 
 Paypal: https://paypal.me/jkbuha
+
 Bitcoin: bc1qjuy6hy5shqqdnyzzcjlc2h4ua47gpugphuxdae
