@@ -6,7 +6,7 @@
 
 | OpenCore Version | 1.0.2 |
 | --- | --- |
-| macOS Version | 13.7 (Ventura) |
+| macOS Version | 14.7 (Sonoma) |
 | SMBios | MacBookAir9,1 |
 
 # Hardware Specifications
@@ -59,7 +59,7 @@ setup_var SaSetup  0xF5 0x02 # DVMT Pre-allocated = 64MB
 setup_var SaSetup  0xF6 0x03 # Total DVMT = MAX
 ```
 
-In macOS (Monterey, Ventura, Sonoma) open a terminal and set the following:
+In macOS (Monterey, Ventura, Sonoma, Sequoia) open a terminal and set the following:
 
 ```bash
 sudo pmset -a hibernatemode 25
@@ -95,7 +95,7 @@ setup_var Setup 0x38  	  0x01      # Enable Sensor Standby
 setup_var Setup 0x44  	  0x01      # Enable MSI
 setup_var Setup 0x428 	  0x02      # USB Port 1 RTD3 Support: Super Speed
 setup_var Setup 0x429 	  0x02      # USB Port 2 RTD3 Support: Super Speed
-setup_var SaSetup 0x130   0x00      # Disable ECC DRAM Support (if Precision doesnt have ECC DRAM)
+setup_var SaSetup 0x130   0x00      # Disable ECC DRAM Support (if no ECC RAM)
 setup_var SaSetup 0x123   0x03      # DMI ASPM: L0sL1
 
 setup_var Setup 0x4CD     0x01      # Enable Tbt Dynamic AC/DC L1
