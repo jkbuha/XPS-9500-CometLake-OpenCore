@@ -4,9 +4,9 @@
 
 # Details
 
-| OpenCore Version | 1.0.1 |
+| OpenCore Version | 1.0.2 |
 | --- | --- |
-| macOS Version | 13.6.9 (Ventura) |
+| macOS Version | 13.7 (Ventura) |
 | SMBios | MacBookAir9,1 |
 
 # Hardware Specifications
@@ -46,9 +46,9 @@ This is the first working configuration for the Dell XPS 9500 with working S4 hi
 | Fingerprint Reader | Disabled |
 
 # S4 Sleep
-Despite Dell's attempts to sabotage S3 sleep, I've managed to get S4 sleep 
-(hibernatemode 25) on macOS, uusing a combination of IFR edits 
-and ACPI table changes. The first step is to change the following 
+Despite Dell's attempts to sabotage S3 sleep, I've managed to get S4 sleep
+(hibernatemode 25) on macOS, uusing a combination of IFR edits
+and ACPI table changes. The first step is to change the following
 variables from the UEFI interface using modGRUBshell:
 
 ```bash
@@ -86,7 +86,7 @@ None as far as I know.
 
 # Experimental settings for faster performance and better power saving
 
-The following UEFI IFR settings have worked very well on my i9 and given me even better performance AND power savings. However YMMV and you may soft-brick your machine (and might need to RTC 
+The following UEFI IFR settings have worked very well on my i9 and given me even better performance AND power savings. However YMMV and you may soft-brick your machine (and might need to RTC
 reset your laptop). Use with caution!
 
 ```bash
@@ -111,7 +111,7 @@ setup_var CpuSetup 0x24D  0x01      # Enable Dual Tau Boost
 setup_var CpuSetup 0x1B7  0x01      # Enable OverClocking Feature
 setup_var CpuSetup 0x2AC  0x01 	    # Enable Intel Speed Optimizer (ISO)
 setup_var CpuSetup 0x46   0x08      # Package C State Limit: C10
-setup_var CpuSetup 0x3B   0x00      # Disable Package C-State Demotion 
+setup_var CpuSetup 0x3B   0x00      # Disable Package C-State Demotion
 setup_var CpuSetup 0x3C   0x01      # Enable Package C-State Un-Demotion
 ```
 
