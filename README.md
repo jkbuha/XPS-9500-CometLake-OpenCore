@@ -4,7 +4,7 @@
 
 # Details
 
-| OpenCore Version | 1.0.2 |
+| OpenCore Version | 1.0.3 |
 | --- | --- |
 | macOS Version | 14.7 (Sonoma) |
 | SMBios | MacBookAir9,1 |
