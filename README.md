@@ -4,9 +4,9 @@
 
 # Details
 
-| OpenCore Version | 1.0.3 |
+| OpenCore Version | 1.0.6 |
 | --- | --- |
-| macOS Version | 14.7 (Sonoma) |
+| macOS Version | 15.7.3 (Sequoia) |
 | SMBios | MacBookAir9,1 |
 
 # Hardware Specifications
