@@ -4,9 +4,9 @@
 
 # Details
 
-| OpenCore Version | 1.0.6 |
+| OpenCore Version | 1.0.7 |
 | --- | --- |
-| macOS Version | 15.7.3 (Sequoia) |
+| macOS Version | 26.2 (Tahoe) |
 | SMBios | MacBookAir9,1 |
 
 # Hardware Specifications
@@ -59,7 +59,7 @@ setup_var SaSetup  0xF5 0x02 # DVMT Pre-allocated = 64MB
 setup_var SaSetup  0xF6 0x03 # Total DVMT = MAX
 ```
 
-In macOS (Monterey, Ventura, Sonoma, Sequoia) open a terminal and set the following:
+In macOS (Monterey, Ventura, Sonoma, Sequoia, Tahoe) open a terminal and set the following:
 
 ```bash
 sudo pmset -a hibernatemode 25
