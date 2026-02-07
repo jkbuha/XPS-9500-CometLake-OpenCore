@@ -24,7 +24,7 @@
 | Webcam | Microdia RGB IR HD camera | ✅ Working |
 | MicroSD Card | RTS5260 Card Reader | ✅ Working |
 | Fingerprint Sensor | Shenzen Goodix | ❌ Not Working |
-| S4 SLeep | Hibernate/Wake | ✅ Working |
+| S4 Sleep | Hibernate/Wake | ✅ Working |
 | GPU | Intel HD630 Graphics | ✅ Working |
 | eGPU | AMD Sapphire Radeon RX6950XT | ✅ Working |
 | Display | 1920 x 1200 FHD LCD | ✅ Working |
@@ -83,6 +83,11 @@ The script relies on the current config.plist and may not work as expected on ot
 # Known Issues
 
 None as far as I know.
+
+# Optimal macOS version
+
+This updated EFI repository will support all macOS versions up to 26 (Tahoe), with updated beta support for hibernation and audio, but I would strongly discourage running Tahoe for the time being. Its performance is notably sluggish due to the new GUI revamp, and is clearly optimised for the non-Intel chipsets. Moreover the level of patching needed with OCLP-Mod is insane just to get the system working at the same functionality as Ventura, which needs absolutely no root patching at all. So, if you want a production environment, install macOS Ventura, or worst case - Sequoia. Stay away from Tahoe as the performance is inferior and the support is patchy at best.
+
 
 # Experimental settings for faster performance and better power saving
 
